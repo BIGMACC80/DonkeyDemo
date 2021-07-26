@@ -10,6 +10,8 @@ generateJoke()
 
 async function generateJoke(){
 
+  document.getElementById("sting_audio").play()
+
 const config = {
   headers:{
 'Accept':'application/json'
@@ -24,5 +26,7 @@ const config = {
   const data = await res.json()
 
 jokeEl.innerHTML= data.joke
+
+
 
 }
